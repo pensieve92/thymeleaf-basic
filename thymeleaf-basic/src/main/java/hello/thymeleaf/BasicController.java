@@ -70,6 +70,13 @@ public class BasicController {
         return "basic/date";
     }
 
+    @GetMapping("/link")
+    public String link(Model moddel) {
+        moddel.addAttribute("param1", "data1");
+        moddel.addAttribute("param2", "data2");
+        return "basic/link";
+    }
+
     @Data
     static class User {
         private String username;
